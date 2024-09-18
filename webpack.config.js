@@ -10,8 +10,9 @@ module.exports ={
         but: "./js/buttons.js",
         main: "./index.js",
         sliver: "./js/slider_swiper.js",
-        swiperBundle: "./js/swiper-bundle.js"
+        swiperBundle: "./js/swiper-bundle.js",
     },
+
     output: {
         filename: "[name].[contenthash].js",
         path: path.resolve(__dirname, "dist"),
@@ -38,9 +39,11 @@ module.exports ={
                 use: ['style-loader', 'css-loader']
             },
             {
-                test: /\.(ttf|woff|woff2|eot)$/,
-                use: ['file-loader']
-            }
+                test: /\.(woff(2)?|ttf|eot|svg)$/,
+                generator: {
+                    filename: 'assets/fonts/[name][ext]', // Путь сохранения шрифтов
+                },
+            },
         ]
     }
 

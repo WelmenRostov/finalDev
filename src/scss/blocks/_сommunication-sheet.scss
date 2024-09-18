@@ -1,0 +1,117 @@
+.сommunication-sheet, .call-sheet{
+
+  &__status{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    /*display: none;*/
+  }
+
+  position: absolute;
+  transition-duration: 400ms;
+  min-width: 320px;
+  height: 100%;
+  z-index: 10;
+  opacity: 1;
+  animation: opacityсommunication-sheet 0.5s forwards;
+  right: 0;
+    background: $white-virgin;
+
+  -webkit-box-shadow: -100px 2px 0px 9999px rgba(255, 255, 255, 0.78);
+  -moz-box-shadow: -100px 2px 0px 9999px rgba(255, 255, 255, 0.78);
+  box-shadow: -100px 2px 0px 9999px rgba(255, 255, 255, 0.78);
+
+  @keyframes opacityсommunication-sheet {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  >button{
+    position: absolute;
+    overflow: visible;
+    margin: 40px 0 0 -62px;
+  }
+  >p {
+    margin: 40px clamp(5vw, 50vw, 203px) 0 auto;
+    width: 100%;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    font-weight: 700;
+    color: black;
+
+    &:before {
+      content: "";
+      border: 2px solid $frames-color;
+      height: 40px;
+      width: 4px;
+      margin-right: 24px;
+      border-top-right-radius: 4px;
+      border-end-end-radius: 4px;
+    }
+  }
+  form{
+    max-width: 376px;
+    padding: 24px 32px 16px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    input{
+      &:nth-child(4){
+        padding-bottom:72px;
+        height: 118px;
+      }
+    }
+    p{
+      min-height: 67px;
+      max-width: 376px;
+      color: $gray-activeButton;
+      a{
+        color: $button-color;
+      }
+    }
+    button{
+      width: 119px;
+      height: 32px;
+      background-color: $button-color;
+      border-radius: 16px;
+      padding: 4px;
+      margin: 16px 0 0 auto;
+      color: $gray-activeButton;
+
+      >p{
+        position: absolute;
+        margin: -8px 4px;
+        font-family: 'TT Lakes', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: -0.15px;
+        color: $white-virgin;
+      }
+
+      img{
+        position: absolute;
+        margin: -5px 0 0 37px;;
+      }
+    }
+  }
+  @media (max-width: 516px){
+    >p {
+      margin: 24px clamp(5vw, 50vw, 203px) 0 auto;
+    }
+    >button{
+      position: static;
+      margin: 24px 0 0 24px;
+    }
+  }
+}

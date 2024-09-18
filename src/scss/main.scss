@@ -1,0 +1,27 @@
+
+@import
+  "command/media_breackpoints",
+  "command/variables";
+
+@import
+  "normalize",
+  "vars",
+  "base",
+  "swiper-bundle";
+
+@import
+  "blocks/menu",
+  "blocks/services-list",
+  "blocks/base-info",
+  "blocks/widget-company",
+  "blocks/widget-technic",
+  "blocks/price-list",
+  "blocks/corp-info",
+  "blocks/open-menu",
+  "blocks/сommunication-sheet";
+
+
+@import
+  "include/max768",
+  "include/max1200",
+  "include/min1366";

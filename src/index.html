@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="shortcut icon" href="pictures/logo/img_logo.png"/>
+    <title>CPS</title>
+</head>
+<body>
+<div class="сommunication-sheet сommunication-sheet__status" id="сommunication-sheet">
+    <button type="button" onclick="CommunicationOn()">
+        <span class="manu__circle">
+            <img src="assets/pictures/header/X.svg" alt="Меню">
+        </span>
+    </button>
+    <p>Обратная связь</p>
+    <form action="">
+        <input type="text" name="login" id="login" placeholder="Имя">
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Телефон">
+        <input type="text" name="email" id="email" placeholder="Электронная почта">
+        <input type="text" name="login" id="message" placeholder="Сообщение">
+        <p class="text-standart">Нажимая “отправить”, вы даете согласие на <a>обработку персональных данных</a> и
+            соглашаетесь с нашей <a>политикой конфиденциальности</a></p>
+        <button>
+            <img src="assets/pictures/price-list/arrow-w.svg">
+            <p>ЗАКАЗАТЬ</p>
+        </button>
+    </form>
+</div>
+
+<div class="call-sheet call-sheet__status" id="call-sheet">
+    <button type="button" onclick="CallOn()">
+        <span class="manu__circle">
+            <img src="assets/pictures/header/X.svg" alt="Меню">
+        </span>
+    </button>
+    <p>Обратная связь</p>
+    <form action="">
+        <input type="tel" id="call-phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Телефон">
+        <p class="text-standart">Нажимая “отправить”, вы даете согласие на <a>обработку персональных данных</a> и
+            соглашаетесь с нашей <a>политикой конфиденциальности</a></p>
+        <button>
+            <img src="assets/pictures/price-list/arrow-w.svg">
+            <p>ЗАКАЗАТЬ</p>
+        </button>
+    </form>
+</div>
+<div class="menu" id="menuID">
+    <div class="conteinet">
+        <nav>
+            <div class="block-logo menu-block-base block-logo__modifier">
+                <button type="button" onclick="MenuOn()">
+                    <span class="manu__circle">
+                        <img src="assets/pictures/header/menu__burger.svg" alt="Меню">
+                        <img src="assets/pictures/header/X.svg" alt="Крест">
+                    </span>
+                </button>
+                <button type="button">
+                    <img src="assets/pictures/header/menu__void-icon.svg" alt="Логотип">
+                </button>
+            </div>
+            <div class="block-group menu-block-base block-group__modifier">
+                <a href="#">
+                    <div class="manu__circle" onclick="CallOn()"><img src="assets/pictures/header/menu_call.svg" alt="Телефоны">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="manu__circle"onclick="CommunicationOn()">
+                        <img src="assets/pictures/header/menu_chat.svg" alt="Поддержка">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="manu__circle">
+                        <img src="assets/pictures/header/menu_profile.svg" alt="Профиль">
+                    </div>
+                </a>
+                <a href="#">
+                    <span>Оставить заявку</span>
+                    <div class="manu__circle">
+                        <img src="assets/pictures/header/menu__repeir.svg" alt="Ключ и молот">
+                    </div>
+                </a>
+                <a href="#">
+                    <span>Статус ремонта</span>
+                    <div class="manu__circle">
+                        <img src="assets/pictures/header/menu_checkstatus.svg" alt="Лупа над дткументом">
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <div class="block-menu">
+            <div class="menu-naw">
+                <ul>
+                    <li>
+                        <a href="#" class="text-accent">Ремонт техники</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="text-accent">Услуги и сервисы</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="text-accent">Корпоративным клиент</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="text-accent">Продавцам техники</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="text-accent">Партнерам</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="text-accent">Производителям</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="text-accent">Наши сервисные центр</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#" class="text-accent">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-footer">
+                <div>
+                    <a>
+                        <button class="manu__circle" onclick="CallOn()">
+                            <img src="assets/pictures/header/menu_call.svg" alt="Лупа над дткументом">
+                        </button>
+                    </a>
+                    <a>
+                        <button class="manu__circle" onclick="CommunicationOn()">
+                            <img src="assets/pictures/header/menu_chat.svg" alt="Лупа над дткументом">
+                        </button>
+                    </a>
+                    <a>
+                        <button class="manu__circle">
+                            <img src="assets/pictures/header/menu_profile.svg" alt="Лупа над дткументом">
+                        </button>
+                    </a>
+                </div>
+                <ul>
+                    <li class="text-accent">mail@cps.com</li>
+                    <li>8 800 890 8900</li>
+                    <li>
+                        <button class="text-accent">RU</button>
+                        <button class="text-accent">EN</button>
+                        <button class="text-accent">CH</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <section>
+        <div class="button-service">
+            <a href="#">
+                <span class="text-accent">Оставить заявку</span>
+                <div class="manu__circle">
+                    <img src="assets/pictures/header/menu__repeir.svg" alt="Ключ и молот">
+                </div>
+            </a>
+            <a href="#">
+                <span class="text-accent">Статус ремонта</span>
+                <div class="manu__circle">
+                    <img src="assets/pictures/header/menu_checkstatus.svg" alt="Лупа над дткументом">
+                </div>
+            </a>
+        </div>
+        <h1 class="main-text main-text__position">Услуги и сервисы</h1>
+
+        <div class="services-list services-list__position">
+            <ul>
+                <li>
+                    <a href="index.html">Ремонтируемые устройства</a>
+                </li>
+                <li>
+                    <a href="index.html">Дополнительные услуги</a>
+                </li>
+                <li>
+                    <a href="index.html">Цены на услуги</a>
+                </li>
+                <li>
+                    <a href="index.html">Специальные цены</a>
+                </li>
+                <li>
+                    <a href="index.html">Адреса сервисных центров</a>
+                </li>
+                <li>
+                    <a href="index.html">Отзывы</a>
+                </li>
+            </ul>
+        </div>
+
+        <article class="base-info base-info__position">
+            <div class="info-text info-text__position">
+                <div id="info-text__container">
+                    <p>
+                        Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                        отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                    </p>
+                    <p>
+
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
+                        большое
+                        количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                        очередь, советуют нас родным и близким.
+                    </p>
+                    <p>Давно установленный факт, что читатель будет отвлекаться на читаемое содержимое страницы при
+                        просмотре ее макета. Смысл использования Lorem Ipsum в том, что в нем более или менее нормальное
+                        распределение букв, в отличие от использования "Контент здесь, контент здесь", что делает его
+                        похожим на читаемый английский.
+                    </p>
+                </div>
+                <button id="contentButton" type="button" onclick="ButtonRead()">
+                    <p id="contentP">Читать далее</p>
+                    <img id="contentImg" src="assets/pictures/body/content__button.svg" alt="Иконка стрелочки">
+                </button>
+            </div>
+            <div class="info-img">
+                <img src="assets/pictures/header/pictures.png" alt="Картинка логотип компании на стене">
+            </div>
+        </article>
+        <div class="widget-company widget-company__position">
+            <div class="dividing-line">
+                <p>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</p>
+            </div>
+            <div class="swiper swiperСompany swiperСompany__position">
+                <!-- Дополнительная требуемая оболочка -->
+                <div class="swiper-wrapper" id="swiperWrapper">
+                    <!-- Слайды -->
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__lenovo.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__sumsung.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__apple.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__viewsonic.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__bosch.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__hp.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__acer.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__sony.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__xiaomi.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__huawey.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img alt="" src="assets/pictures/company-group/company-group__jbl.png">
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Разбивка на страницы-->
+                <div class="swiper-pagination swiper-paginationCompany"></div>
+
+
+                <!-- Если нам нужны навигационные кнопки
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>-->
+
+                <!-- сли нам нужна полоса прокрутки
+                <div class="swiper-scrollbar"></div> -->
+            </div>
+            <button id="swiperButton" type="button" onclick="SwiperRead()">
+                <p id="swiperP" class="text-accent">Показать все</p>
+                <img id="swiperImg" src="assets/pictures/body/content__button.svg" alt="Иконка стрелочки">
+            </button>
+        </div>
+        <div class="widget-technic widget-technic__position">
+            <div class="dividing-line">
+                <p>РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</p>
+            </div>
+            <div class="swiper swiperTechnic swiperTechnic__position">
+                <!-- Дополнительная требуемая оболочка -->
+                <div class="swiper-wrapper" id="swiperTWrapper">
+                    <!-- Слайды -->
+                    <div class="swiper-slide">
+                        <div>
+                            <p>Ремонт ноутбуков</p>
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <p>Ремонт планшетов</p>
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <p>Ремонт ПК</p>
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <p>Ремонт смартфонов</p>
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <p>Ремонт мониторов</p>
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <p>Ремонт колонок</p>
+                            <a href="#">
+                                <div class="manu__circle">
+                                    <img src="assets/pictures/company-group/converted%20(21).svg" alt="Лупа над дткументом">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Разбивка на страницы-->
+                <div class="swiper-pagination swiper-paginationTechnic"></div>
+            </div>
+            <button id="swiperTButton" type="button" onclick="SwiperTRead()">
+                <p id="swiperTP" class="text-accent">Показать все</p>
+                <img id="swiperTImg" src="assets/pictures/body/content__button.svg" alt="Иконка стрелочки">
+            </button>
+        </div>
+        <div class="price-list price-list__position">
+            <div class="dividing-line">
+                <p>ЦЕНЫ НА УСЛУГИ</p>
+            </div>
+            <div class="swiper swiperPrise swiperPrise__position">
+                <!-- Дополнительная требуемая оболочка -->
+                <div class="swiper-wrapper">
+                    <!-- Слайды -->
+                    <div class="swiper-slide">
+                        <button>
+                            <img src="assets/pictures/price-list/arrow-w.svg">
+                            <p>ЗАКАЗАТЬ</p>
+                        </button>
+                        <div>
+                            <p class="text-ghost">Ремонтные услуги</p>
+                            <p class="text-standart">Диагностика</p>
+                            <p class="text-ghost">Цена</p>
+                            <p class="text-standart">Бесплатно</p>
+                            <p class="text-ghost">Срок</p>
+                            <p class="text-standart">30 мин</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <button>
+                            <img src="assets/pictures/price-list/arrow-w.svg">
+                            <p>ЗАКАЗАТЬ</p>
+                        </button>
+                        <div>
+                            <p class="text-ghost">Ремонтные услуги</p>
+                            <p class="text-standart">Замена дисплея</p>
+                            <p class="text-ghost">Цена</p>
+                            <p class="text-standart">1 000 ₽</p>
+                            <p class="text-ghost">Срок</p>
+                            <p class="text-standart">30-120 мин</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <button>
+                            <img src="assets/pictures/price-list/arrow-w.svg">
+                            <p>ЗАКАЗАТЬ</p>
+                        </button>
+                        <div>
+                            <p class="text-ghost">Ремонтные услуги</p>
+                            <p class="text-standart">Замена полифонического динамика</p>
+                            <p class="text-ghost">Цена</p>
+                            <p class="text-standart">1 000 ₽</p>
+                            <p class="text-ghost">Срок</p>
+                            <p class="text-standart">30-120 мин</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <button>
+                            <img src="assets/pictures/price-list/arrow-w.svg">
+                            <p>ЗАКАЗАТЬ</p>
+                        </button>
+                        <div>
+                            <p class="text-ghost">Ремонтные услуги</p>
+                            <p class="text-standart">Тестирование с выдачей технического заключения</p>
+                            <p class="text-ghost">Цена</p>
+                            <p class="text-standart">1 000 ₽</p>
+                            <p class="text-ghost">Срок</p>
+                            <p class="text-standart">30-120 мин</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <button>
+                            <img src="assets/pictures/price-list/arrow-w.svg">
+                            <p>ЗАКАЗАТЬ</p>
+                        </button>
+                        <div>
+                            <p class="text-ghost">Ремонтные услуги</p>
+                            <p class="text-standart">Замена программного обеспечения</p>
+                            <p class="text-ghost">Цена</p>
+                            <p class="text-standart">1 000 ₽</p>
+                            <p class="text-ghost">Срок</p>
+                            <p class="text-standart">30-120 мин</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-paginationPrise"></div>
+            </div>
+            <div class="price-info">
+                <div>
+                    <p class="text-standart">
+                        Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения
+                        коммерческого предложения на постоянное обслуживание, оставьте заявку.
+                    </p>
+                </div>
+                <button class="text-accent">Получить коммерческое предложение
+                    <img src="assets/pictures/price-list/arrow-p.svg">
+                </button>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="corp-info text-ghost">
+            <ul>
+                <li>
+                    <p>© 2019 CPS</p>
+                    <p>Разработано командой Apesong</p>
+                </li>
+                <li>
+                    <p>Политика конфиденциальности.</p>
+                </li>
+                <li>
+                    <p>Информация, размещенная на данной странице, не является публичной офертой.</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/slider_swiper.js"></script>
+<script src="js/buttons.js"></script>
+</html>

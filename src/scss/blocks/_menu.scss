@@ -1,0 +1,175 @@
+.menu {
+  padding: 0;
+  margin: 0;
+  background-color: $white-virgin;
+  height: 88px;
+  border-bottom: 1px solid;
+  border-color: $frames-color;
+
+  .conteinet {
+
+    .menu-footer, .menu-naw, .block-group > a > span, .block-group > a:nth-child(1), .block-group > a:nth-child(2), .block-group > a:nth-child(3) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      /*display: none;*/
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      height: 100%;
+      align-items: center;
+      padding-top: 16px;
+
+      .menu-naw {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+        /*display: none;*/
+      }
+      span {
+        font-family: 'TT Lakes';
+        font-weight: 500;
+      }
+
+      div a {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        gap: 8px;
+        margin: 0;
+        letter-spacing: -0.2px;
+        color: black;
+      }
+
+      .menu-block-base {
+        gap: 16px;
+      }
+
+      .block-logo {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+
+        margin-left: 16px;
+
+        .manu__circle{
+          :nth-child(2){
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+            /*display: none;*/
+          }
+        }
+
+
+
+      }
+
+      .block-logo__modifier {
+        gap: 0;
+      }
+
+      .block-group {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+
+        padding-right: 16px;
+      }
+
+      @include base-format {
+        .block-logo:nth-child(1)::after {
+          content: "";
+          position: absolute;
+          background-color: $white-base;
+          width: 2px;
+          height: 32px;
+          border-radius: 1px;
+          margin-left: -55px;
+        }
+        .block-logo > button:nth-child(2) {
+          margin-left: 34px;
+        }
+      }
+      @include desktop {
+        .block-group > a > span {
+          position: static;
+          width: auto;
+          height: auto;
+          margin: 0;
+          border: 0;
+          padding: 0;
+          clip: auto;
+          overflow: visible;
+          /*display: none;*/
+        }
+      }
+      @include mobile {
+        .block-logo > button:nth-child(2):after {
+          content: "";
+          position: absolute;
+          background-color: $white-base;
+          width: 2px;
+          height: 32px;
+          border-radius: 1px;
+          margin-top: 10px;
+          margin-left: 16px;
+        }
+        .block-logo__modifier {
+          gap: 16px;
+        }
+      }
+      @include onli-desktop {
+        .block-group > a:nth-child(1), .block-group > a:nth-child(2), .block-group > a:nth-child(3) {
+          position: static;
+          width: auto;
+          height: auto;
+          margin: 0;
+          border: 0;
+          padding: 0;
+          clip: auto;
+          overflow: visible;
+          /*display: none;*/
+        }
+        .block-group > a:nth-child(3):after {
+          content: "";
+          background-color: $white-base;
+          width: 2px;
+          height: 32px;
+          border-radius: 2px;
+          margin-left: 10px;
+        }
+      }
+      @include laptop {
+        .block-group > a:nth-child(3):after {
+          content: "";
+          background-color: $white-base;
+          width: 2px;
+          height: 32px;
+          border-radius: 2px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.widget-company {
+  &__position{
+    padding-left: 16px;
+  }
+
+  .swiperСompany {
+    overflow: hidden;
+    &__position {
+      padding-top: 16px;
+    }
+
+    .swiper-wrapper {
+      padding-bottom: 36px;
+      gap: 16px 16px;
+      .swiper-slide {
+        width: 240px;
+        height: 72px;
+
+        > div {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 240px;
+          height: 72px;
+          background-color: $white-virgin;
+          border: 1px $white-base solid;
+          border-radius: 6px;
+
+
+          > img {
+            padding-left: 16px;
+            overflow: auto;
+            margin-right: 42px;
+            max-height: 80%;
+            object-fit: contain;
+          }
+
+          a {
+            padding-right: 16px;
+
+            div {
+              > img {
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination{
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #B5B6BC;
+      }
+    }
+  }
+  button {
+    padding-left: 36px;
+
+    >img {
+      position: absolute;
+      margin: -18px 0 0px -76px;
+      transition: transform 1.5s ease;
+      transform-origin: 5px 5px;
+    }
+
+    p {
+      font-family: 'TT Lakes', sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      font-style: normal;
+    }
+  }
+  .rotate {
+    transform-origin: 5px 5px;
+    transform: rotate(180deg);
+  }
+}

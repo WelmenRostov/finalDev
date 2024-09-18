@@ -1,0 +1,262 @@
+@include desk {
+
+  body {
+    display: flex;
+
+    .button-service{
+      position: absolute;
+      display: flex;
+      padding-top: 24px;
+      right: 16px;
+      gap:32px;
+      width: auto;
+      height: auto;
+      clip: auto;
+      overflow: visible;
+
+      a{
+        width: auto;
+        height: auto;
+        display: flex;
+        color: black;
+
+        span{
+          font-family: 'TT Lakes';
+          padding-right: 8px;
+          padding-top: 11px;
+          font-weight: 500;
+        }
+        div{
+        }
+      }
+    }
+
+    .menu {
+      position: sticky;
+      top: 0;
+      background: 0;
+      border: 0;
+
+      @keyframes opacityMenu {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+
+
+      @keyframes transformMenu {
+        0% {
+          transform: translateX(-150%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .conteinet {
+        z-index: 5;
+
+        position: sticky;
+        width: 320px;
+        background-color: $white-virgin;
+        transform: translateX(-150%);
+        animation: transformMenu 1s forwards;
+
+        .menu-footer, .menu-naw, .block-group > a > span, .block-group > a:nth-child(1), .block-group > a:nth-child(2), .block-group > a:nth-child(3) {
+          position: static;
+          width: auto;
+          height: auto;
+          margin: 0;
+          border: 0;
+          padding: 0;
+          clip: auto;
+          overflow: visible;
+          /*display: none;*/
+        }
+
+        nav {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          align-items: center;
+          padding-top: 16px;
+
+          span {
+            font-family: 'TT Lakes';
+            font-weight: 500;
+          }
+
+          div a {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            gap: 8px;
+            margin: 0;
+            letter-spacing: -0.2px;
+            color: black;
+          }
+
+          .menu-block-base {
+            gap: 16px;
+          }
+
+          .block-logo {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            height: 100%;
+            align-items: center;
+
+            margin-left: 16px;
+
+            span {
+
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              margin: -1px;
+              border: 0;
+              padding: 0;
+              clip: rect(0 0 0 0);
+              overflow: hidden;
+              /*display: none;*/
+            }
+          }
+
+          .block-logo__modifier {
+            gap: 16px;
+          }
+
+          .block-group {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: center;
+
+            padding-right: 16px;
+
+            a{
+              &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(2), span{
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                border: 0;
+                padding: 0;
+                clip: rect(0 0 0 0);
+                overflow: hidden;
+                /*display: none;*/
+              }
+            }
+          }
+        }
+
+        .block-menu {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-left: 24px;
+          margin-top: 32px;
+          height: 91vh;
+
+          .menu-naw {
+            display: flex;
+            flex-direction: column;
+
+            ul {
+              display: flex;
+
+              li {
+                position: relative;
+
+                a {
+                  position: relative;
+                  display: block;
+                  margin-bottom: 32px;
+                  overflow: hidden;
+                  color: black;
+                }
+
+                &:hover {
+                  content: "";
+                  position: relative;
+                  border: 1px solid $frames-color;
+                  background-color: $frames-color;
+                  height: 32px;
+                  width: 5px;
+                  margin-left: -24px;
+                  margin-bottom: 23.2px;
+                  margin-top: -5px;
+                  border-top-right-radius: 4px;
+                  border-end-end-radius: 4px;
+
+                  a {
+                    color: $gray-activeButton;
+                    padding: 0;
+                    width: 400px;
+                    margin-top: 4px;
+                    margin-left: 23.3px;
+                    overflow: hidden;
+                  }
+                }
+              }
+            }
+          }
+
+          .menu-footer {
+            padding-bottom: 46px;
+
+            div {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 16px;
+              padding-top: 8px;
+              margin-right: auto;
+            }
+
+            ul {
+
+              li {
+                padding-top: 16px;
+
+                &:nth-child(1) {
+                  &:hover {
+                    color: $gray-activeButton;
+                  }
+                }
+
+                &:nth-child(2) {
+                  font-size: 24px;
+                  font-family: 'TT Lakes';
+                  font-weight: 700;
+                  letter-spacing: -0.6px;
+                  line-height: 32px;
+                  margin: 0;
+
+                  &:hover {
+                    color: $gray-activeButton;
+                  }
+
+                }
+
+                &:nth-child(3) {
+                  display: flex;
+                  gap: 7px;
+
+                  button {
+
+                    &:hover {
+                      color: $gray-activeButton;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

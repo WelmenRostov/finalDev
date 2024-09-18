@@ -1,0 +1,254 @@
+@include tab {
+
+  .base-info {
+    &__position {
+      margin-top: 32px;
+      margin-left: 24px;
+      padding: 0;
+    }
+
+    .info-img {
+      margin-right: 24px;
+    }
+  }
+
+  .widget-company {
+    &__position {
+      padding-left: 24px;
+    }
+
+    .swiperСompany {
+
+      .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        height: 160px;
+        margin-bottom: 16px;
+        padding: 0;
+
+
+        .swiper-slide {
+          > div {
+            flex-direction: row;
+          }
+        }
+      }
+
+      > .mod__wraperopen {
+        height: auto;
+      }
+    }
+
+    @media (min-width: 1864px) {
+      Button {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+        /*display: none;*/
+      }
+    }
+  }
+
+
+
+  .widget-technic {
+    &__position {
+      padding-left: 24px;
+    }
+
+    .swiperTechnic {
+      .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        height: 160px;
+        margin-bottom: 16px;
+        padding: 0;
+
+
+        .swiper-slide {
+          > div {
+            flex-direction: row;
+          }
+        }
+      }
+
+      > .mod__wraperopen {
+        height: auto;
+      }
+    }
+    @media (min-width: 1948px) {
+      Button {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+        /*display: none;*/
+      }
+    }
+  }
+  .corp-info {
+    ul {
+      li{
+        justify-content: space-around;
+        &:nth-child(1){
+          text-align: left;
+          margin-left: 24px;
+        }
+        &:nth-child(3){
+          width: 330px;
+          text-align: right;
+          margin-right: 24px;
+        }
+      }
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .price-list {
+    &__position{
+      margin-left: 24px;
+    }
+
+    .text-ghost {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      /*display: none;*/
+    }
+
+    .swiperPrise {
+      padding-top: 56px;
+
+      .swiper-wrapper {
+        max-width: 99%;
+        height: 100%;
+        flex-wrap: wrap;
+        background: $white-virgin;
+        border: 1px $white-base solid;
+        border-radius: 6px;
+        padding: 0;
+
+        .swiper-slide:nth-child(2) {
+          &:nth-child(2) {
+            p {
+              &:nth-child(1) {
+                height: auto;
+                border: 0;
+                padding: 0;
+                clip: auto;
+                overflow: visible;
+                /*display: none;*/
+                position: absolute;
+                margin: -132px 50% 0 0;
+                width: auto;
+              }
+
+              &:nth-child(3) {
+                height: auto;
+                border: 0;
+                padding: 0;
+                clip: auto;
+                overflow: visible;
+                /*display: none;*/
+                position: absolute;
+                margin: -132px 50% 0 50%;
+                width: 30%;
+              }
+
+              &:nth-child(5) {
+                height: auto;
+                border: 0;
+                padding: 0;
+                clip: auto;
+                overflow: visible;
+                /*display: none;*/
+                position: absolute;
+                margin: -132px 31% 0 66%;
+                width: 45%;
+              }
+            }
+          }
+        }
+
+        .swiper-slide {
+          display: flex;
+          max-width: 100%;
+          height: 100%;
+          justify-content: space-between;
+          background: 0;
+          border: 0 $white-base solid;
+          border-radius: 6px;
+
+          &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5){
+            &:after{
+              content: "";
+              position: absolute;
+              background-color: $white-base;
+              width: 96%;
+              height: 1px;
+              border-radius: 2px;
+              margin-left: 2%;
+              margin-right: 50%;
+            }
+          }
+
+
+          button {
+            position: relative;
+            order: 2;
+            margin: 23px;
+          }
+          div {
+            display: flex;
+            padding: 23px;
+            text-align: center;
+            border: 0;
+
+            p {
+              margin: 0;
+              padding-top: 6px;
+              text-align: left;
+
+              &:nth-child(4) {
+                position: absolute;
+                width: 30%;
+                margin-right: 50%;
+                margin-left: 50%;
+              }
+
+              &:nth-child(6) {
+                position: absolute;
+                width: 45%;
+                margin-right: 31%;
+                margin-left: 66%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .price-info{
+      margin-top: 24px;
+    }
+  }
+
+}

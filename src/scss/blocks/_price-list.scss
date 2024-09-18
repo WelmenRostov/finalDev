@@ -1,0 +1,84 @@
+.price-list{
+  &__position{
+    margin-left: 16px;
+  }
+  .swiperPrise{
+     overflow: hidden;
+     &__position{
+       padding-top:16px;
+     }
+     .swiper-wrapper{
+       padding-bottom: 32px;
+       .swiper-slide{
+         max-width: 260px;
+         height: 200px;
+         background: $white-virgin;
+         border: 1px $white-base solid;
+         border-radius: 6px;
+         position: relative;
+
+         button{
+           width: 119px;
+           height: 32px;
+           background-color: $button-color;
+           border-radius: 16px;
+           position: absolute;
+           padding: 4px;
+           margin: 152px 16px 0 125px;
+           color: $gray-activeButton;
+
+           p{
+             position: absolute;
+             margin: -8px 4px;
+             font-family: 'TT Lakes', sans-serif;
+             font-size: 12px;
+             font-weight: 700;
+             letter-spacing: -0.15px;
+             color: $white-virgin;
+           }
+
+           img{
+             position: absolute;
+             margin: -5px 0 0 37px;;
+           }
+         }
+
+         div{
+           p{
+             margin: 4px auto auto 16px;
+
+             &:nth-child(1), &:nth-child(3), &:nth-child(5){
+               font-family: 'TT Lakes', sans-serif;
+               margin: 16px auto auto 16px;
+             }
+           }
+         }
+       }
+     }
+    .swiper-pagination{
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #B5B6BC;
+      }
+    }
+  }
+  .price-info{
+    text-align: left;
+    max-width: 421px;
+
+    padding-bottom: 36px;
+    p{
+      margin-bottom: 10px;
+    }
+    button{
+        margin-top: 24px;
+        text-align: left;
+        width: 230px;
+      img{
+        margin-top: 4px;
+        margin-left: 8px;
+      }
+    }
+  }
+}

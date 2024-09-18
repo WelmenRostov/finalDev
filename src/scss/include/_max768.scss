@@ -1,0 +1,33 @@
+@include mob {
+  .base-info {
+    flex-wrap: wrap;
+
+    &__position {
+      padding: 0;
+    }
+
+    .info-text{
+      margin-top: 24px;
+      margin-left: 16px;
+    }
+    .info-img {
+      > img {
+        border-radius: 0;
+      }
+    }
+  }
+  .widget-company, .widget-technic{
+
+    >button{
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      /*display: none;*/
+    }
+  }
+}

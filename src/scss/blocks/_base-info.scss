@@ -1,0 +1,102 @@
+.base-info {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  height: 80%;
+
+  &__position{
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .info-img {
+    max-height: 100%;
+    width: 100%;
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  .info-text {
+    width: 100%;
+    height: 100%;
+
+    &__position {
+    }
+
+    button > img {
+      position: absolute;
+      margin: -18px 0 0px -76px;
+      transition: transform 1.5s ease;
+      transform-origin: 5px 5px;
+    }
+
+    div {
+      margin: 0;
+      overflow: hidden;
+      scrollbar-width: none;
+      min-width: 288px;
+      max-height: 88px;
+      transition: all 1.5s ease-out;
+
+      p{
+        font-family: 'TT Lakes', sans-serif;
+        font-size: 14px;
+        color:  $base-info-text;
+        line-height: 18px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        font-style: normal;
+        &:nth-child(2), &:nth-child(3){
+          padding-top: 16px;
+        }
+      }
+    }
+    .rotate {
+      transform-origin: 5px 5px;
+      transform: rotate(180deg);
+    }
+    .mod__text-open{
+      max-height: 288px;
+      transition: all 1.5s ease-in;
+    }
+  }
+  #contentButton{
+    padding-left: 32px;
+    padding-top: 16px;
+
+    p{
+      font-family: 'TT Lakes', sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      font-style: normal;
+    }
+  }
+  @include lap {
+    .info-img{
+      margin-right: 16px;
+    }
+    &__position {
+      padding-top: 24px;
+    }
+  }
+
+}@media (max-width: 319.9px) {
+  .base-info {
+    display: flex;
+    flex-wrap: wrap;
+
+    .info-text div{
+      margin-left: 16px;
+    }
+    .info-img {
+      max-height: 100%;
+      width: 100%;
+      img {
+        border-radius: 0;
+      }
+    }
+  }
+}

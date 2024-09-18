@@ -1,0 +1,76 @@
+.widget-technic{
+  &__position{
+    padding-left: 16px;
+  }
+  .swiperTechnic{
+    overflow: hidden;
+    &__position{
+      padding-top:16px;
+    }
+    .swiper-wrapper{
+      padding-bottom: 36px;
+      gap: 16px 16px;
+
+      .swiper-slide{
+        position: relative;
+        max-width: 240px;
+        height: 160px;
+        background: $white-virgin;
+        border: 1px $white-base solid;
+        border-radius: 6px;
+
+        >div{
+          width: 240px;
+          height: 160px;
+          p{
+            font-family: 'TT Lakes', sans-serif;
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 500;
+            letter-spacing: -0.2px;
+            font-style: normal;
+
+            padding-top: 16px;
+            padding-left: 16px;
+          }
+          a{
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+          }
+        }
+      }
+    }
+    .swiper-pagination{
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #B5B6BC;
+      }
+    }
+  }
+  button {
+    padding-left: 36px;
+    margin-bottom: 16px;
+
+    >img {
+      position: absolute;
+      margin: -18px 0 0px -76px;
+      transition: transform 1.5s ease;
+      transform-origin: 5px 5px;
+    }
+
+    p {
+      font-family: 'TT Lakes', sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      font-style: normal;
+    }
+  }
+  .rotate {
+    transform-origin: 5px 5px;
+    transform: rotate(180deg);
+  }
+}

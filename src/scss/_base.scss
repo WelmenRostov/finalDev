@@ -1,0 +1,124 @@
+/*Base*/
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'TT Lakes Compressed Medium', sans-serif;
+  background-color: #F8F8F8;
+  min-width: 320px;
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+
+  button {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    cursor: pointer;
+  }
+
+  .manu__circle {
+    width: 40px;
+    height: 40px;
+    background: $button-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+
+  section > h1 {
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    font-weight: 700;
+  }
+
+  .dividing-line {
+    height: 56px;
+    color: #7E7E82;
+    background: linear-gradient(0.25turn, #F8F8F8, $white-virgin);
+
+    p {
+      margin: 0;
+      padding-top: 15px;
+    }
+  }
+
+  .text-standart {
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2px;
+  }
+
+  .text-accent {
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    font-style: normal;
+  }
+
+  .text-ghost {
+    font-size: 14px;
+    color: $gray-activeButton;
+    line-height: 14px;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .button-service{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    /*display: none;*/
+  }
+  input{
+    margin-bottom: 16px;
+    height: 48px;
+    max-width: 380px;
+    border: 1px solid $white-base;
+    border-radius: 7px;
+    padding-left: 16px;
+
+
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+
+    &::placeholder {
+      color: #212529;
+      opacity: 0.4;
+    }
+
+    &:focus {
+      color: black;
+      outline: 0;
+      box-shadow: 0 0 0 0.1rem $frames-color;
+    }
+
+    &:disabled{
+      background-color: #f5f5f5;
+      opacity: 1;
+    }
+  }
+
+}

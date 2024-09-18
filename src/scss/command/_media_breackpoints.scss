@@ -1,0 +1,72 @@
+@mixin base-format{
+  @media (min-width: $breakpoints_mobile +0.1) and (max-width: $breakpoints_desktop + 0.1){
+    @content
+  }
+}
+@mixin full-format{
+  @media (min-width: $breakpoints_desktop) {
+    @content
+  }
+}
+
+@mixin desktop{
+  @media (min-width: $breakpoints_desktop){
+    @content
+  }
+}
+@mixin onli-desktop{
+  @media (max-width: $breakpoints_desktop - 0.1) and (min-width: $breakpoints_tablet) {
+    @content
+  }
+}
+
+@mixin laptop{
+  @media (max-width: $breakpoints_laptop){
+    @content
+  }
+}
+@mixin onli-laptop{
+  @media (max-width: $breakpoints_laptop) and (min-width: $breakpoints_tablet -0.1) {
+    @content
+  }
+}
+
+@mixin tablet{
+  @media (max-width: $breakpoints_tablet){
+    @content
+  }
+}
+@mixin onli-tablet{
+  @media (max-width: $breakpoints_tablet) and (min-width: $breakpoints_mobile +0.1) {
+    @content
+  }
+}
+
+@mixin mobile{
+  @media (max-width: $breakpoints_mobile){
+    @content
+  }
+}
+
+
+
+@mixin mob{
+  @media (max-width: $breakpoints_tablet - 0.1) and (min-width: $breakpoints_mobile){
+    @content
+  }
+}
+@mixin tab{
+  @media (min-width: $breakpoints_tablet - 0.1){
+    @content
+  }
+}
+@mixin lap{
+  @media (max-width: $breakpoints_laptop) and (min-width: $breakpoints_tablet - 0.1){
+    @content
+  }
+}
+@mixin desk{
+  @media (min-width: $breakpoints_desktop - 0.1){
+    @content
+  }
+}

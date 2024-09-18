@@ -2,6 +2,7 @@ const path = require("path")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackInjectStringPlugin = require('html-webpack-inject-string-plugin');
 
 module.exports ={
     context: path.resolve(__dirname, 'src'),
@@ -30,7 +31,11 @@ module.exports ={
                     to: path.resolve(__dirname, 'dist/assets')
                 }
             ]
-        })
+        }),
+        new HtmlWebpackInjectStringPlugin({
+            search: "</body>", // Specify where to inject in the head section
+            inject: '<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>',
+        }),
     ],
     module: {
         rules: [

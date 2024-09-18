@@ -63,5 +63,11 @@ function CommunicationOn() {
     elem.classList.toggle('сommunication-sheet__status');
 }
 
+window.CallOn = CallOn;
+window.CommunicationOn = CommunicationOn;
+window.MenuOn = MenuOn;
+window.ButtonRead = ButtonRead;
+window.SwiperTRead = SwiperTRead;
+window.SwiperRead = SwiperRead
 
 

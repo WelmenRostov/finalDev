@@ -1,13 +1,12 @@
 .open-menu {
+  position: fixed;
   margin: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 4;
-  background-color: $white-virgin;
-  position: absolute;
-  opacity: 0;
+  background-color: $white-openMenu ;
   animation: opacityMenu 0.5s forwards;
 
   @keyframes opacityMenu {

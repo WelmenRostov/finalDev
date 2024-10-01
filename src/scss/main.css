@@ -1585,15 +1585,14 @@ section .services-list ul li :hover {
 }
 
 .open-menu {
+  position: fixed;
   margin: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 4;
-  background-color: #FFFFFF;
-  position: absolute;
-  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.7);
   animation: opacityMenu 0.5s forwards;
 }
 @keyframes opacityMenu {
@@ -1770,21 +1769,20 @@ section .services-list ul li :hover {
 }
 
 .сommunication-sheet, .call-sheet {
-  position: absolute;
+  position: fixed;
   transition-duration: 400ms;
   min-width: 320px;
   height: 100%;
   z-index: 10;
-  opacity: 1;
-  animation: opacityсommunication-sheet 0.5s forwards;
   right: 0;
+  transition: right 0.2s linear;
   background: #FFFFFF;
   -webkit-box-shadow: -100px 2px 0px 9999px rgba(255, 255, 255, 0.78);
   -moz-box-shadow: -100px 2px 0px 9999px rgba(255, 255, 255, 0.78);
   box-shadow: -100px 2px 0px 9999px rgba(255, 255, 255, 0.78);
 }
 .сommunication-sheet__status, .call-sheet__status {
-  position: absolute;
+  position: fixed;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -1792,15 +1790,8 @@ section .services-list ul li :hover {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+  right: -502px;
   /*display: none;*/
-}
-@keyframes opacityсommunication-sheet {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 .сommunication-sheet > button, .call-sheet > button {
   position: absolute;

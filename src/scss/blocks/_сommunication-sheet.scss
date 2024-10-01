@@ -1,7 +1,7 @@
 .сommunication-sheet, .call-sheet{
 
   &__status{
-    position: absolute;
+    position: fixed;
     width: 1px;
     height: 1px;
     margin: -1px;
@@ -9,31 +9,22 @@
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+    right: -502px;
     /*display: none;*/
   }
 
-  position: absolute;
+  position: fixed;
   transition-duration: 400ms;
   min-width: 320px;
   height: 100%;
   z-index: 10;
-  opacity: 1;
-  animation: opacityсommunication-sheet 0.5s forwards;
   right: 0;
-    background: $white-virgin;
+  transition: right .2s linear;
+  background: $white-virgin;
 
   -webkit-box-shadow: -100px 2px 0px 9999px rgba(255, 255, 255, 0.78);
   -moz-box-shadow: -100px 2px 0px 9999px rgba(255, 255, 255, 0.78);
   box-shadow: -100px 2px 0px 9999px rgba(255, 255, 255, 0.78);
-
-  @keyframes opacityсommunication-sheet {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
   >button{
     position: absolute;

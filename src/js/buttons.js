@@ -61,8 +61,34 @@ function CallOn() {
 function CommunicationOn() {
     let elem = document.querySelector('#сommunication-sheet');
     elem.classList.toggle('сommunication-sheet__status');
+
+}
+function useOutsideClick(element) {
+    // Function to handle click events
+    function handleClick(event) {
+        // Check if the clicked target is outside the specified element
+        if (event.target.classList[0] === 'open-menu') {
+            MenuOn();
+        }
+    }
+
+    // Add event listener to the document
+    document.addEventListener('click', handleClick);
+
+    // Return a cleanup function to remove the event listener
+    return () => {
+        document.removeEventListener('click', handleClick);
+    };
 }
 
+
+// Example usage
+const myElement = document.getElementById('myElement');
+const closeDropdown = () => {
+    console.log('Clicked outside! Closing dropdown...');
+};
+
+window.useOutsideClick = useOutsideClick;
 window.CallOn = CallOn;
 window.CommunicationOn = CommunicationOn;
 window.MenuOn = MenuOn;
